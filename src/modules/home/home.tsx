@@ -5,11 +5,11 @@ import { Cover } from '@components/cover'
 import { DropArea } from '@components/drop-area'
 
 export const Home = () => {
-  const [selectedFile, setSelectedFile] = useState(null)
+  const [selectedFile, setSelectedFile] = useState<File | null>(null)
 
-  const handleFileAccepted = (file) => {
+  const handleFileAccepted = (file: File) => {
     setSelectedFile(file)
-    console.log('Arquivo aceito:', file)
+    console.log('Accepted file:', file)
   }
 
   return (

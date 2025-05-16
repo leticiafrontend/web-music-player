@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { type ReactNode } from 'react'
 
 import { DropIndicator } from '@components/drop-indicator'
 import { useDropArea } from '@hooks/use-drop-area'
@@ -14,13 +14,8 @@ export const DropArea = ({
   onFileAccepted,
   cursorSmoothFactor = 0.1,
 }: DropAreaProps) => {
-  const {
-    dropAreaRef,
-    dragOverlayRef,
-    dropIndicatorRef,
-    isDraggingOver,
-    currentPosition,
-  } = useDropArea({ onFileAccepted, cursorSmoothFactor })
+  const { dropAreaRef, dragOverlayRef, dropIndicatorRef, isDraggingOver } =
+    useDropArea({ onFileAccepted, cursorSmoothFactor })
 
   return (
     <div ref={dropAreaRef} className="w-full h-full relative outline-none">

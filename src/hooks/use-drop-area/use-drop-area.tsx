@@ -47,8 +47,8 @@ export function useDropArea({
       e.preventDefault()
       stopTracking()
 
-      if (onFileAccepted && e.dataTransfer?.files?.length > 0) {
-        onFileAccepted(e.dataTransfer.files[0])
+      if (onFileAccepted && e?.dataTransfer?.files?.length) {
+        onFileAccepted(e?.dataTransfer?.files?.[0] as File)
       }
     }
 
