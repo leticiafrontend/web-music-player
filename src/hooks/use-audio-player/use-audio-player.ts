@@ -48,8 +48,8 @@ export const useAudioPlayer = (file: File | null): UseAudioPlayer => {
     return new Promise((resolve) => {
       const fallbackMetadata: AudioMetadata = {
         title: file.name.replace(/\.[^/.]+$/, ''),
-        artist: 'Lady Gaga',
-        album: 'Mayhem',
+        artist: 'Unknown Artist',
+        album: 'Unknown Album',
       }
 
       if (window.jsmediatags) {
