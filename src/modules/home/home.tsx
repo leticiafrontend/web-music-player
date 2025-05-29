@@ -23,7 +23,7 @@ export const Home = () => {
   return (
     <DropArea onFileAccepted={handleFileAccepted}>
       <div className="bg-charcoal h-screen w-screen flex flex-col items-center justify-center text-white relative">
-        <Cover gradient={selectedFile ? 'blue' : undefined} />
+        <Cover gradient={selectedFile ? 'pink' : undefined} />
         <h1 className="text-2xl font-semibold my-10">
           {selectedFile ? audioPlayer.metadata.album : 'Drop your music file'}
         </h1>
